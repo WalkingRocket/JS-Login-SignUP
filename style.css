@@ -1,0 +1,41 @@
+body{
+    background-color: #24353F;
+}
+
+.card{
+    background-color: #24353F;
+  box-shadow: -6px 0 20px -4px rgba(0, 0, 0, 1), 6px 0 20px -4px rgba(0, 0, 0, 1);
+}
+
+.Title{
+    color: rgb(23, 162, 184);
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    line-height: 48px;
+}
+
+.form-control::placeholder{
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.btn{
+    color: rgb(23, 162, 184);
+    border-color: rgb(23, 162, 184);
+}
+
+.btn:hover{
+    background-color: #17A2B8 !important;
+    color: white !important;
+}
+
+.sign{
+    text-decoration: none;
+}
+
+.sign:hover{
+    text-decoration: underline;
+}
