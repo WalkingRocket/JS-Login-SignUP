@@ -15,8 +15,12 @@ body{
     line-height: 48px;
 }
 
+.form-control{
+    color: White;
+}
+
 .form-control::placeholder{
-    color: white;
+    color: rgba(255, 255, 255, 0.3);
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
