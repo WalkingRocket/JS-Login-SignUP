@@ -79,36 +79,60 @@ if (loginButton) {
   loginButton.addEventListener("click", function () {
     const email = inputLoginEmail.value;
     const password = inputLoginPassword.value;
+    const lastDot = email.lastIndexOf(".");
 
     if (!email || !password) {
       errorMsg.innerText = "Please fill in all fields.";
-      email.value = "";
-      password.value = "";
+      inputLoginEmail.value = "";
+      inputLoginPassword.value = "";
+      console.log(true);
+      
       return;
-    } else if (!email.includes("@")) {
+    }
+
+    if (!email.includes("@")) {
       errorMsg.innerText = "Please enter a valid email address.";
-      email.value = "";
-      password.value = "";
+      inputLoginEmail.value = "";
+      inputLoginPassword.value = "";
       return;
-    } else if (localStorage.getItem("user")) {
-      const user = JSON.parse(localStorage.getItem("user"));
+    }
+
+    if (
+      lastDot === -1 ||
+      lastDot > email.length - 4 ||
+      !/^[a-zA-Z]{3}$/.test(email.slice(lastDot + 1))
+    ) {
+      errorMsg.innerText =
+        "Please enter a valid Email with a 3-letter extension.";
+      return;
+    }
+
+    const userData = localStorage.getItem("user");
+    if (userData) {
+      const user = JSON.parse(userData);
+
       if (
         user.email.toLowerCase() === email.toLowerCase() &&
         user.password === password
       ) {
+        // Successful login
         window.location.href = "Home.html";
-        email.value = "";
-        password.value = "";
         return;
       } else {
         errorMsg.innerText = "Invalid email or password.";
-        email.value = "";
-        password.value = "";
+        inputLoginEmail.value = "";
+        inputLoginPassword.value = "";
         return;
       }
+    } else {
+      errorMsg.innerText = "No user found. Please sign up first.";
+      inputLoginEmail.value = "";
+      inputLoginPassword.value = "";
+      return;
     }
   });
 }
+
 
 //  Welcome Message Display
 // This function retrieves the user data from localStorage and displays a welcome message on the Home page
