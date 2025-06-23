@@ -1,13 +1,13 @@
-body{
+body {
     background-color: #24353F;
 }
 
-.card{
+.card {
     background-color: #24353F;
-  box-shadow: -6px 0 20px -4px rgba(0, 0, 0, 1), 6px 0 20px -4px rgba(0, 0, 0, 1);
+    box-shadow: -6px 0 20px -4px rgba(0, 0, 0, 1), 6px 0 20px -4px rgba(0, 0, 0, 1);
 }
 
-.Title{
+.Title {
     color: rgb(23, 162, 184);
     font-weight: 500;
     font-size: 40px;
@@ -15,31 +15,61 @@ body{
     line-height: 48px;
 }
 
-.form-control{
+.form-control {
     color: White;
 }
 
-.form-control::placeholder{
+.form-control::placeholder {
     color: rgba(255, 255, 255, 0.3);
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 }
 
-.btn{
+.btn {
     color: rgb(23, 162, 184);
     border-color: rgb(23, 162, 184);
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #17A2B8 !important;
     color: white !important;
 }
 
-.sign{
+.sign {
     text-decoration: none;
 }
 
-.sign:hover{
+.sign:hover {
     text-decoration: underline;
+}
+
+
+
+.navbar {
+    background-color: #24353F !important;
+    border-bottom: 1px solid rgb(0, 0, 0) !important;
+    box-shadow: -6px 0 20px -4px rgba(0, 0, 0, 1), 6px 0 20px -4px rgba(0, 0, 0, 1);
+}
+
+.home-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logo{
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.logout-btn {
+    color: rgb(23, 162, 184);
+    border-color: rgb(23, 162, 184);
+    margin-right: 10%;
 }
